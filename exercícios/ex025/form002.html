@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"> <!--Dados sensíveis-->
+        <p> <!--Geralmente são utilizadas divs-->
+            <label for="iusu">Usuário*:</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="15" placeholder="nome do usuário" autocomplete="username"> 
+            <!--required - Obrigatório preencher o campo-->
+            <!--min e maxlenght - Quantidades máximas e mínimas de letras-->
+            <!--size - Tamanho para o número de caracteres indicado-->
+            <!--placeholder - Descrição da função da caixa que fica dentro dela até o usuário entra com dados-->
+            <!--autocomplete direto nos inputs dá maior quantidade de opções do tipo de informação a ser completada-->
+        </p>
+        <p>
+            <label for="isen">Senha*:</label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" autocomplete="new-password">
+        </p>
+        <!--new-password - Sugestão de senha nova
+        current-password - Sugestão de senhas existestes para o usuário indicado-->
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
