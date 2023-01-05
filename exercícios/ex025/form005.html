@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários - Checkbox e Radio button</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkbox e Radio button</h1>
+    <form action="cadastropphp" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="imasc"> <label for="masc">Masculino</label> <br>
+            <input type="radio" name="sexo" id="ifem" checked> <label for="ifem">Feminino</label>
+        </fieldset>
+        <!--radio bullet circular
+        - Para evitar que as bolinhas não possam ser desmarcadas deve-se deixar os campos com o mesmo nome, mas ids diferentes, assim seleciona ou um ou outro
+        - Caso queira deixar uma opção pré marcada utiliza-se dentro do input "checked" (tanto para radio como checkbox)-->
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="">Tênis</label> <br>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <!--radio - bullete -->
+</body>
+</html>
