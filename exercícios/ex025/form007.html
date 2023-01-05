@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select, datalist e textarea</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on"></form>
+    <p> <!--Select -> Lista suspensa-->
+        <label for="iest">Estado:</label>
+        <select name="estado" id="iest">
+            <option value="" selected>--- Escolha um Estado ---</option>
+            <optgroup label="Região Sudeste">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </optgroup>
+            <optgroup label="Região Nordeste">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </optgroup>
+            <!--opt group permite separação em grupos de opções-->
+        </select>
+    </p>
+
+    <p>
+        <label for="iprof">Profissão:</label>
+        <input type="text" name="prof" id="iprof" list="lstprof">
+        <datalist id="lstprof">
+            <option value="ADM">Administrador</option>
+            <option value="CONT">Contabilista</option>
+            <option value="DEV">Desenvolvedor</option>
+            <option value="PROF">Professor</option>
+        </datalist>
+        <!--Se não colocar o value option vai direto-->
+        <!--Dá para usar isto para selecionar código de acordo com profissão ou algo neste sentido-->
+    </p>
+
+    <p> <!--Espaço para mensagem-->
+        <label for="imsg">Mensagem:</label> <br>
+        <textarea name="msg" id="img" cols="30" rows="10" placeholder="Escreve aqui sua mensagem!"></textarea>
+        <!--style="resize: none" - Evita que o usuário redimensione
+        maxlenght="x" - da para limitar a quantidade de caracteres-->
+    </p>
+
+
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        
+    </p>
+
+
+</body>
+</html>
