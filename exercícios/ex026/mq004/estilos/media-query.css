@@ -2,7 +2,95 @@
 
 /* Todas as demais mídias */
 
-@media print {
 
+/* Typical Device Breakpoints (Guanabara)
+------------------------------------------
+Pequenas telas: até 600px
+Celular: 600 - 768 px
+Tablet: 769 - 992 px
+Desktop: 993 - 1200 px
+Grandes Telas: 1201 px - and more
+*/
+
+/* Typical Device Breakpoints (2022)
+-------------------------------------
+Celular: 320 - 480 px
+Tablet: 481 - 768 px
+Laptops: 769 - 1024 px
+Desktop: 1025 - 1200 px
+TV: 1201 px - and more
+*/
+
+@media print { /*IMPRESSÃO*/
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /*desnecessário porque não imprime background*/
+
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after { /* Opcional */
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+
+    h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+
+    img#phone { display: none;}
+    img#print { display: block;}
+
+}
+
+/*Como a configuração geral já é para mobile pode ignorar a configuração extra*/
+
+@media screen and (min-width: 769px) and (max-width: 992px) { /*TABLET*/
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    
+    img#phone { display: none;}
+    img#tablet { display: block;}
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) { /*DESKTOP*/
+
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    
+
+    img#phone { display: none;}
+    img#pc { display: block;}
+
+
+    
+}
+
+@media screen and (min-width: 1201px) { /*GRANDES TELAS*/
+
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
+    }
+
+    img#phone { display: none;}
+    img#tv { display: block;}
 }
 
